@@ -2,7 +2,13 @@ const teachers = ["Nathan", "Ed", "Fabio", "Phil", "Carlo", "Lewis", "Luca"]; //
 
 // 1. Inverti l'ordine degli insegnanti nell'array teachers
 // e salva il risultato nella variabile reversedTeachers
-const reversedTeachers = teachers.reverse();
+let reversedTeachers = [];
+
+for (let i = teachers.length - 1; i >= 0; i--) {
+  let switchTeacher = teachers[i];
+  reversedTeachers.push(switchTeacher);
+}
+
 console.log(`Task "Bonus" 1) ${reversedTeachers}`);
 
 // 2. Crea un nuovo array chiamato 'longNames' che contenga solo gli insegnanti
@@ -23,5 +29,5 @@ console.log(`Task "Bonus" 2) ${longNames}`);
 
 // 3. Rimuovi 'Ed' dall'array teachers
 
-teachers.splice(5, 1);
+teachers.splice(1, 1);
 console.log(`Task "Bonus" 3) ${teachers}`);
